@@ -1,6 +1,7 @@
-# Sanity Content studio starter
-#### Based on sanity-shopify-studio.git
+# Sanity content studio starter
+#### Based on [sanity-shopify-studio.git](https://github.com/sanity-io/sanity-shopify-studio)
 
-- Fill in `manage.json`
+- `$ npm run install`
+- Fill in `manage.json` with project details
 - Adjust schema to your needs
 - `$ npm run dev`
