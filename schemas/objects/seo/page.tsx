@@ -4,25 +4,18 @@ export default defineField({
     name: 'seo.page',
     title: 'SEO',
     type: 'object',
-    options: {
-        collapsed: false,
-        collapsible: true,
-    },
     fields: [
-        defineField({
+        {
             name: 'title',
-            title: 'Titel',
-            type: 'seo.title',
-        }),
-        defineField({
+            type: 'seo.fragment.title',
+        },
+        {
             name: 'description',
-            title: 'Description',
-            type: 'seo.description',
-        }),
-        defineField({
+            type: 'seo.fragment.description',
+        },
+        {
             name: 'image',
-            title: 'Afbeelding',
-            type: 'image',
-        }),
+            type: 'seo.fragment.image',
+        }
     ],
 })

@@ -9,13 +9,14 @@ export default defineField({
     icon: LinkIcon,
     fields: [
         {
-            title: 'Title',
             name: 'title',
+            title: 'Title',
             type: 'string',
             validation: (Rule) => Rule.required(),
         },
         {
             name: 'reference',
+            title: 'Referentie',
             type: 'reference',
             weak: true,
             validation: (Rule) => Rule.required(),

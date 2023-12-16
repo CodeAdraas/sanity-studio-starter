@@ -12,14 +12,8 @@ export default defineField({
             ],
             marks: {
                 decorators: [
-                  {
-                    title: 'Italic',
-                    value: 'em',
-                  },
-                  {
-                    title: 'Strong',
-                    value: 'strong',
-                  },
+                    {title: 'Italic', value: 'em'},
+                    {title: 'Strong', value: 'strong'},
                 ],
                 annotations: [
                     {

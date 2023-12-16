@@ -4,26 +4,19 @@ export default defineField({
     name: 'seo.home',
     title: 'SEO',
     type: 'object',
-    options: {
-        collapsed: false,
-        collapsible: true,
-    },
     fields: [
-        defineField({
+        {
             name: 'title',
-            title: 'Titel',
-            type: 'seo.title',
-        }),
-        defineField({
+            type: 'seo.fragment.title',
+        },
+        {
             name: 'description',
-            title: 'Omschrijving',
-            type: 'seo.description',
-        }),
-        defineField({
+            type: 'seo.fragment.description',
+        },
+        {
             name: 'image',
-            title: 'Afbeelding',
-            type: 'image',
-        }),
+            type: 'seo.fragment.image',
+        }
     ],
     validation: (Rule) => Rule.required(),
 })

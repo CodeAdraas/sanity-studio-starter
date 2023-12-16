@@ -1,22 +1,18 @@
 import {defineField} from "sanity"
+import {BlockContentIcon} from '@sanity/icons'
 
 export default defineField({
-    name: 'accordionBody',
+    name: 'module.fragment.accordionBody',
     title: 'Inhoud',
+    icon: BlockContentIcon,
     type: 'array',
     of: [
         {
             type: 'block',
             marks: {
                 decorators: [
-                  {
-                    title: 'Italic',
-                    value: 'em',
-                  },
-                  {
-                    title: 'Strong',
-                    value: 'strong',
-                  },
+                    {title: 'Italic', value: 'em'},
+                    {title: 'Strong', value: 'strong'}
                 ],
                 annotations: [
                     {

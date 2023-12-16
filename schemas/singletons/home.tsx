@@ -1,5 +1,5 @@
 import {HomeIcon} from '@sanity/icons'
-import {defineType, defineField} from 'sanity'
+import {defineType} from 'sanity'
 
 export const TITLE = 'Home'
 
@@ -9,30 +9,25 @@ export default defineType({
     type: 'document',
     icon: HomeIcon,
     groups: [
-        {
-            default: true,
-            name: 'editorial',
-            title: 'Editorial',
-        },
-        {
-            name: 'seo',
-            title: 'SEO',
-        },
+        {name: 'editorial', title: 'Content', default: true},
+        {name: 'seo', title: 'SEO'},
     ],
     fields: [
+        // Content
         {
+            group: 'editorial',
             name: 'sections',
             title: 'Secties',
             type: 'array',
             of: [{type: 'pageSection'}],
-            group: 'editorial',
         },
-        defineField({
+        // SEO
+        {
             name: 'seo',
             title: 'SEO',
             type: 'seo.home',
             group: 'seo',
-        }),
+        },
     ],
     preview: {
         prepare() {

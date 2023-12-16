@@ -1,26 +1,26 @@
 import {defineField} from 'sanity'
 
 export default defineField({
-    name: 'accordionGroup',
+    name: 'module.fragment.accordionGroup',
     type: 'object',
     title: 'Accordion groep',
     fields: [
         {
             name: 'title',
-            type: 'string',
             title: 'Titel',
+            type: 'string',
             validation: (Rule) => Rule.required()
         },
         {
             name: 'body',
-            type: 'accordionBody',
             title: 'Inhoud',
+            type: 'module.fragment.accordionBody',
             validation: (Rule) => Rule.required()
         },
         {
             name: 'darkIcon',
-            type: 'boolean',
             title: 'Donker icoontje?',
+            type: 'boolean',
             initialValue: false
         }
     ]

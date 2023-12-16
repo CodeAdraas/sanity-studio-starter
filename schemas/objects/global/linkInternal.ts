@@ -8,18 +8,16 @@ export default defineField({
     type: 'object',
     icon: LinkIcon,
     fields: [
-        // Title
         {
-            title: 'Title',
             name: 'title',
+            title: 'Titel',
             type: 'string',
             validation: (Rule) => Rule.required(),
         },
-        // Reference
         {
             name: 'reference',
-            type: 'reference',
             title: 'Referentie',
+            type: 'reference',
             weak: true,
             validation: (Rule) => Rule.required(),
             to: PAGE_REFERENCES,
@@ -32,14 +30,12 @@ export default defineField({
             referenceTitle: 'reference.title',
             title: 'title',
         },
-        prepare(selection) {
-            const {
-                reference,
-                referenceProductTitle,
-                referenceTitle,
-                title,
-            } = selection
-
+        prepare({
+            reference,
+            referenceProductTitle,
+            referenceTitle,
+            title,
+        }) {
             let subtitle = []
             if (reference) {
                 subtitle.push([`→ ${referenceTitle || referenceProductTitle || reference?._id}`])

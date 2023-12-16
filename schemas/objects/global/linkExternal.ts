@@ -4,27 +4,24 @@ import {defineField} from 'sanity'
 export default defineField({
     title: 'Externe link',
     name: 'linkExternal',
-    type: 'object',
     icon: EarthGlobeIcon,
+    type: 'object',
     fields: [
-        // Title
         {
             title: 'Title',
             name: 'title',
             type: 'string',
             validation: (Rule) => Rule.required(),
         },
-        // URL
         {
             name: 'url',
             title: 'URL',
             type: 'url',
             validation: (Rule) => Rule.required().uri({scheme: ['http', 'https']}),
         },
-        // Open in a new window
         {
-            title: 'Open in a new window?',
             name: 'targetBlank',
+            title: 'Open in nieuw tabblad?',
             type: 'boolean',
             initialValue: true,
         },
@@ -34,9 +31,7 @@ export default defineField({
             title: 'title',
             url: 'url',
         },
-        prepare(selection) {
-            const {title, url} = selection
-
+        prepare({title, url}) {
             let subtitle = []
             if (url) {
                 subtitle.push(`→ ${url}`)

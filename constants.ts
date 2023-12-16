@@ -8,3 +8,7 @@ export const PAGE_REFERENCES = [
   {type: 'home'},
   {type: 'page'},
 ]
+
+export const SECTION_COLORS = [
+  {value: 'white', title: 'Wit'}
+]

@@ -3,20 +3,20 @@ import {EnterRightIcon} from '@sanity/icons'
 
 export default defineField({
     name: 'annotationLinkAnchor',
-    title: 'Hakk link',
-    type: 'object',
+    title: 'Haak link',
     icon: EnterRightIcon,
+    type: 'object',
     fields: [
         {
-            title: 'Title',
             name: 'title',
+            title: 'Titel',
             type: 'string',
             validation: R => R.required()
         },
         {
             name: 'anchorId',
-            type: 'string',
             title: 'Haak ID',
+            type: 'string'
         }
     ]
 })

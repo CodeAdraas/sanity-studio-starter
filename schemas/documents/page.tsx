@@ -9,15 +9,8 @@ export default defineType({
     type: 'document',
     icon: DocumentIcon,
     groups: [
-        {
-            default: true,
-            name: 'editorial',
-            title: 'Editorial',
-        },
-        {
-            name: 'seo',
-            title: 'SEO',
-        },
+        {name: 'editorial', title: 'Content', default: true},
+        {name: 'seo', title: 'SEO'},
     ],
     fields: [
         {
@@ -29,6 +22,7 @@ export default defineType({
         },
         {
             name: 'slug',
+            title: 'Slug',
             type: 'slug',
             options: {source: 'title'},
             group: 'editorial'

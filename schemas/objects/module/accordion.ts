@@ -11,7 +11,7 @@ export default defineField({
             name: 'groups',
             title: 'Groepen',
             type: 'array',
-            of: [{type: 'accordionGroup'}],
+            of: [{type: 'module.fragment.accordionGroup'}],
         },
     ],
     preview: {

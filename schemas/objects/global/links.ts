@@ -6,7 +6,6 @@ export default defineField({
     type: 'array',
     of: [
         {type: 'linkAnchor'},
-        {type: 'linkCta'},
         {type: 'linkInternal'},
         {type: 'linkExternal'},
     ],

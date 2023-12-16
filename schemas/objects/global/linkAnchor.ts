@@ -4,19 +4,19 @@ import {EnterRightIcon} from '@sanity/icons'
 export default defineField({
     name: 'linkAnchor',
     title: 'Haak link',
-    type: 'object',
     icon: EnterRightIcon,
+    type: 'object',
     fields: [
         {
-            title: 'Title',
             name: 'title',
+            title: 'Titel',
             type: 'string',
             validation: (Rule) => Rule.required(),
         },
         {
             name: 'anchorId',
-            type: 'string',
             title: 'Haak ID',
+            type: 'string',
         },
     ],
     preview: {
@@ -24,9 +24,7 @@ export default defineField({
             title: 'title',
             anchorId: 'url',
         },
-        prepare(selection) {
-            const {title, anchorId} = selection
-
+        prepare({title, anchorId}) {
             let subtitle = []
             if (anchorId) {
                 subtitle.push(`→ ${anchorId}`)

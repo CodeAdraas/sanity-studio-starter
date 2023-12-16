@@ -11,16 +11,14 @@ export default defineField({
         collapsible: true,
     },
     fields: [
-        defineField({
+        {
             name: 'title',
-            title: 'Titel',
-            type: 'seo.title',
-        }),
-        defineField({
+            type: 'seo.fragment.title',
+        },
+        {
             name: 'description',
-            title: 'Omschrijving',
-            type: 'seo.description',
-        }),
+            type: 'seo.fragment.description',
+        }
     ],
     validation: (Rule) => Rule.required(),
 })
